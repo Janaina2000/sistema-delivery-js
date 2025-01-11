@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de delivery</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <section class="container">
+
+        <div class="container-formulario">
+
+            <h1>Bem-vindo ao Sistema de Delivery</h1>
+
+            <form id="pedidoForm" class="formulario" onsubmit="adicionarPedido(event)">
+                <div class="campo campo-cliente">
+                    <label for="nomeCliente">Nome do Cliente:</label>
+                    <input type="text" id="nomeCliente" required placeholder="Nome do Cliente">
+                </div>
+
+                <div class="campo campo-endereco">
+                    <label for="enderecoCliente">Endereço do Cliente:</label>
+                    <input type="text" id="enderecoCliente" required placeholder="Endereço do Cliente">
+                </div>
+
+                <div class="campo campo-pedido">
+                    <label for="pedido">Codigo Pedido:</label>
+                    <input type="text" id="pedido" required placeholder="Codigo do Pedido">
+                </div>
+
+
+                <div class="campo campo-valor">
+                    <label for="valor">Valor (R$):</label>
+                    <input type="number" id="valor" required placeholder="Valor" step="0.01">
+                </div>
+
+                <div class="campo campo-restaurante">
+                    <label for="restaurante">Restaurante:</label>
+                    <input type="text" id="restaurante" required placeholder="Nome do Restaurante">
+                </div>
+
+                <div class="campo campo-entregador">
+                    <label for="nomeEntregador">Nome do Entregador:</label>
+                    <input type="text" id="nomeEntregador" required placeholder="Nome do Entregador">
+                  </div>
+            
+                  <div class="campo campo-status">
+                    <label for="statusEntrega">Status da Entrega:</label>
+                    <select id="statusEntrega" required>
+                      <option value="Pendente">Pendente</option>
+                      <option value="Em andamento">Em andamento</option>
+                      <option value="Concluída">Concluída</option>
+                    </select>
+                  </div>            
+
+                <div class="container-btn">
+                    <button type="submit" class="btn">Adicionar Pedido</button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <h2>Pedidos Cadastrados</h2>
+        <table id="tabelaPedidos">
+            <thead>
+                <tr>
+                    <th>Nome Cliente</th>
+                    <th>Prato</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os pedidos serão inseridos aqui -->
+            </tbody>
+        </table>
+
+    </section>
+
+    <script src="./assets/js/cliente.js"></script>
+    <script src="./assets/js/entrega.js"></script>
+    <script src="./assets/js/pedido.js"></script>
+    <script src="./assets/js/restaurantes.js"></script>
+    <script type="module" src="./assets/js/app.js"></script>
+</body>
+
+</html>
