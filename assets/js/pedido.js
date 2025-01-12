@@ -11,7 +11,7 @@ class Pedido {
         this._valor = valor;
         this._entrega = new Entrega(entregador, codigo, status); 
     }
-te
+
     get cliente() {
         return this._cliente;
     }
